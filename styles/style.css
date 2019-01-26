@@ -214,7 +214,7 @@ header {
 
 .article1 .articleItem p {
     font-family: 'Roboto', serif;
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 300;
     line-height: 1.5rem;
 }
@@ -249,7 +249,7 @@ header {
 .articleItem2 h2 {
     width: 60%;
     font-family: 'Cormorant Garamond';
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 1.9rem;
@@ -263,7 +263,7 @@ header {
     line-height: 1.45;
     float: left;
     clear: both;
-    font-size: 20px;
+    font-size: .9rem;
 }
 
 .articleItem2 button,
@@ -301,9 +301,9 @@ header {
 }
 
 .articleItem3 h2 {
-    width: 60%;
+    width: 100%;
     font-family: 'Cormorant Garamond';
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 1.9rem;
@@ -316,7 +316,7 @@ header {
     line-height: 1.45;
     float: left;
     clear: both;
-    font-size: 20px;
+    font-size: .8rem;
 }
 
 /*------------ Article 3 Style Ends -----------*/
@@ -389,7 +389,7 @@ section.iconLink {
 
 .mainFooter h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
     /* border: 1px solid cadetblue; */
@@ -462,10 +462,11 @@ section.iconLink {
 
 .footerNavItem {
     font-family: 'Catamaran', sans-serif;
-    font-size: .9rem;
+    font-size: .8rem;
     text-transform: uppercase;
     float: right;
     clear: both;
+    
     /* border: 1px solid cadetblue; */
 }
 
@@ -473,6 +474,7 @@ section.iconLink {
     color: black;
     text-align: right;
     line-height: 2;
+    letter-spacing: 1px;
     /* border: 1px solid red; */
 }
 
@@ -487,3 +489,4 @@ section.iconLink {
     text-align: center;
 
 }
+
