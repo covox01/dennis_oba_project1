@@ -31,9 +31,13 @@ img {
 }
 
 /*------------ Header -----------*/
-
+body {
+    max-width: 1800px;
+    margin: 0 auto;
+}
 header {
     background-image: url(../assets/header/backgroundSm.jpg);
+    background-position: center;
     min-height: 100vh;
     max-width: 2000px;
     width: 100%;
@@ -42,10 +46,9 @@ header {
 }
 
 .container {
-    max-width: 1500px;
+    max-width: 1080px;
     width: 84%;
     margin: 0 auto;
-    /* border: .5px solid red; */
 }
 
 .headerNav {
@@ -65,15 +68,15 @@ header {
 /* -- Navigation Starts -- */
 
 .navigation {
+    width: 427px;
     float: right;
     margin: 0 auto;
-    width: 427px;
     transform: translateY(50%);
 }
 
 .navigation a {
     font-family: 'Catamaran', sans-serif;
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -158,7 +161,7 @@ header {
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
-    margin: 5% auto 2.5%;
+    margin: 50px auto 25px;
     width: 100%;
     float: left;
     border: 1px solid red;
@@ -171,9 +174,9 @@ header {
 
 .newsArticleImages div {
     float: left;
-    width: calc((100% - 9%) / 3);
-    margin: 2.5% 2.25%;
-    border: 1px solid red;
+    width: calc((100% - 80px) / 3);
+    margin: 25px 20px 50px;
+    /* border: 1px solid red; */
 }
 
 .newsArticleImages div:first-child {
@@ -182,8 +185,11 @@ header {
 
 .newsArticleImages div:last-child {
     margin-right: 0;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
+
+/*------------ Common Article Styles -----------*/
+
 
 /*------------ Article 1 Style Starts -----------*/
 
@@ -193,22 +199,25 @@ header {
 }
 
 .article1 .articleImage {
-    width: calc(30% - 3%);
+    width: calc(30% - 20px);
+    margin-right: 20px;
     float: left;
-    border: 1px solid red;
-    margin: 0 2.25% 0 0;
 }
 
 .article1 .articleItem {
-    width: calc(73% - 4.5%);
+    width: calc(70% - 20px);
+    /* margin-top: 15px; */
+    margin-left: 20px;
     float: left;
-    margin: 0 0 0 2.25%;
+    /* border: 1px solid red; */
 }
 
 .article1 .articleItem h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 600;
+    line-height: .9;
+    padding-bottom: 10px;
     text-transform: uppercase;
 }
 
@@ -216,22 +225,21 @@ header {
     font-family: 'Roboto', serif;
     font-size: .8rem;
     font-weight: 300;
-    line-height: 1.5rem;
+    line-height: 1.8;
 }
 
 .article1 button {
     font-family: 'Cormorant Garamond', serif;
-    font-size: .8rem;
+    font-size: .7rem;
     font-weight: 600;
     color: white;
     text-transform: uppercase;
     background: rgba(24, 51, 153, 0.78);
     border: none;
-    margin-top: 15%;
-    padding: .7rem 1.5rem;
+    margin-top: 25px;
+    padding: 15px 30px;
     display: block;
-    position: absolute;
-    bottom: 0;
+    /* border: 1px solid red; */
 }
 
 /*------------ Article 1 Style Ends -----------*/
@@ -241,15 +249,16 @@ header {
     margin-top: 5%;
 }
 .article2 .articleItem2 {
-    width: calc(50% - 3%);
+    width: calc(50% - 80px);
     float: left;
-    margin-top: 8%;
+    margin-top: 50px;
+    margin-right: 80px;
 }
 
 .articleItem2 h2 {
     width: 60%;
     font-family: 'Cormorant Garamond';
-    font-size: 1.8rem;
+    font-size: 1.75rem;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 1.9rem;
@@ -259,24 +268,25 @@ header {
 
 .articleItem2 p {
     font-family: 'Roboto', sans-serif;
+    font-size: .8rem;
     font-weight: 300;
-    line-height: 1.45;
+    line-height: 1.8;
     float: left;
     clear: both;
-    font-size: .9rem;
+    
 }
 
 .articleItem2 button,
 .articleItem3 button {
     font-family: 'Cormorant Garamond', serif;
-    font-size: .8rem;
+    font-size: .7rem;
     font-weight: 600;
     color: white;
     text-transform: uppercase;
     background: rgba(24, 51, 153, 0.78);
     border: none;
-    margin-top: 5%;
-    padding: .7rem 1.5rem;
+    margin-top: 35px;;
+    padding: 15px 30px;
     display: block;
     float: left;
     clear: both;
@@ -295,9 +305,11 @@ header {
 }
 
 .article3 .articleItem3 {
-    width: calc(50% - 3%);
+    width: calc(50% - 80px);
     float: right;
-    margin-top: 9%;
+    margin-top: 50px;
+    margin-left: 80px;
+    /* border: 1px solid red; */
 }
 
 .articleItem3 h2 {
@@ -312,11 +324,11 @@ header {
 
 .articleItem3 p {
     font-family: 'Roboto', sans-serif;
+    font-size: .8rem;
     font-weight: 300;
-    line-height: 1.45;
+    line-height: 1.8;
     float: left;
     clear: both;
-    font-size: .8rem;
 }
 
 /*------------ Article 3 Style Ends -----------*/
@@ -345,7 +357,7 @@ section.iconLink {
     text-align: center;
     /* border: 1px solid red; */
     width: calc((100% - 60px) / 3);
-    margin: 5% 15px;
+    margin: 25px 15px 0;
 }
 
 .iconLinkItem:first-child {
@@ -384,7 +396,7 @@ section.iconLink {
 
 .mainFooter .container {
     padding: 5% 0 5%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .mainFooter h3 {
@@ -399,25 +411,29 @@ section.iconLink {
 .mainFooter p, .mainFooter span {
     font-family: 'Roboto', sans-serif;
     font-weight: 300px;
+    font-size: 0.8rem;
     /* border: 1px solid crimson; */
 }
 
 .subscribe {
     float: left;
-    width: calc(60% - 100px);
-    margin-right: 100px;
+    width: calc(50% - 75px);
+    margin-right: 75px;
+    /* border: 1px solid red; */
 }
 
 .subscribe p {
-    padding: 2% 0 3%;
+    padding: 10px 0 10px;
 }
 
 .subscribe input {
-    height: 48px;
-    width: 75%;
+    font-family: 'Roboto', sans-serif;
+    font-size: .8rem;
+    height: 48.5px;
+    width: calc(75% - 30px);
     float: left;
+    padding-left: 30px;
     border: none;
-    /* border: 1px solid red; */
 }
 
 .subscribe button {
@@ -428,36 +444,44 @@ section.iconLink {
     text-transform: uppercase;
     background: black;
     border: none;
-    padding: 15px 40px;
+    padding: 15px 30px;
     display: block;
     float: left;
-    width: 25%;
+    /* width: 25%; */
+    text-align: center;
+    /* border: 1px solid red; */
 }
+/*------------ Contact Styles Starts  -----------*/
 
 .contact {
+    width: calc(40% - 150px);
+    margin: 0 75px;
     float: left;
-    width: calc(34% - 200px);
-    margin: 0 50px;
     /* border: 1px solid red; */
 }
 
+.contact h3 {
+    margin-bottom: 10px;
+}
+
 .contact span {
+    font-size: .8rem;
+    padding: 5px 0;
     float: left;
     clear: both;
-    padding: 2.6% 0;
 }
 
 .contact span:nth-of-type(3) {
     padding-bottom: 0;
-    /* border: 1px solid blue; */
 }
 
+/*------------ Contact Styles Ends -----------*/
+
 .footerNav {
-    /* border: 1px solid blue; */
-    float: right;
+    width: calc(10% - 75px);
     line-height: 5px;
-    width: calc(9% - 100px);
-    margin-left: 100px;
+    margin-left: 75px;
+    float: right;
 }
 
 .footerNavItem {
@@ -466,7 +490,6 @@ section.iconLink {
     text-transform: uppercase;
     float: right;
     clear: both;
-    
     /* border: 1px solid cadetblue; */
 }
 
@@ -483,10 +506,13 @@ section.iconLink {
 .copyrightFooter {
     width: 100%;
     font-family: 'Roboto', sans-serif;
+    font-size: .8rem;
     color: black;
     background: #acacac;
     padding: 15px 0;
     text-align: center;
-
 }
 
+.copyrightFooter i {
+    font-size: .8rem;
+}
