@@ -65,6 +65,12 @@ header {
     position: relative;
 }
 
+/* @media (max-width: 1010px) {
+    header {
+        width: 80%;
+    }
+} */
+
 .container {
     max-width: 1080px;
     width: 84%;
@@ -205,7 +211,6 @@ header {
 @media (max-width: 1010px) {
     .newsArticleImages {
         margin-bottom: 10%;
-        margin-top: 10%;
     }
     .newsArticleImages div:nth-child(-n+1) {
         width: calc(50% - 20px); 
@@ -300,14 +305,14 @@ header {
 @media (max-width: 1010px) {
     .article1 .articleImage {
         width: 90%;
-        margin: 10% auto 0;
+        margin: 0 auto 10%;
         float: none;
     }
 
     .article1 .articleItem {
         width: 80%;
         float: none;
-        margin: 10% auto;
+        margin: 0 auto 10%;
     }
     .article1 h2 {
         float: none;
@@ -356,34 +361,39 @@ header {
 
 @media (max-width: 1010px) {
 
-    .articleImageMobile {
-        background: url(../assets/article/articleImage5/articleImage5Md.jpg);
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background: cover;
-        height: 500px;
+.article2 {
+    margin-top: 0;
+}
+    .article2 .articleImage {
+        display: none;
+    }
+     .article2 .articleImageMobile {
         width: 100%;
         display: block;
     }
-    .article2 .articleImage {
-       display: none;
-    }
-
-    .articleItem2 {
-        width: 80%;
-        float: none;
-        margin: 10% auto;
-    }
-
-    .articleItem2 h2 {
+    .article2 .articleImageMobile img {
         width: 100%;
-        text-align: center;
-        margin: auto;
-        float: none;
+        display: block;
+        margin-bottom: 10%;
     }
 
-    .articleItem2 p {
+    .article2 .articleItem2 {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
         text-align: center;
+    }
+
+    .article2 .articleItem2 h2 {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .article2 .articleItem2 p {
+        width: 80%;
+        margin: 0 auto;
         float: none;
     }
 }
@@ -419,23 +429,37 @@ header {
 }
 
 @media (max-width: 1010px) {
-    .article3 img {
-       display: none;
+    .article3 .articleImage {
+        display: none;
     }
-
-     .articleImageMobile {
-        background: url(../assets/article/articleImage6/articleImage6Md.jpg);
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background: cover;
-        height: 500px;
+     .article3 .articleImageMobile {
         width: 100%;
         display: block;
     }
+    .article3 .articleImageMobile img {
+        width: 100%;
+        display: block;
+        margin-bottom: 10%;
+    }
 
-    .articleItem3 {
+    .article3 .articleItem3 {
+        width: 100%;
+        float: none;
+        margin: 10% auto;
+        text-align: center;
+    }
+
+    .article3 .articleItem3 h2 {
+        width: 100%;
         float: none;
         margin: auto;
+        text-align: center;
+    }
+
+    .article3 .articleItem3 p {
+        width: 80%;
+        margin: 0 auto;
+        float: none;
     }
 }
 
