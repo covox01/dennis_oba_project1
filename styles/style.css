@@ -17,6 +17,25 @@ h1, h2, h3, h4, ul, li, a, p, nav, span {
     margin: 0;
 }
 
+/*------------ Fonts -----------*/
+
+h2, h3,
+button,
+.logo, .mainTitle, 
+.sectionTitle, 
+.iconLink,
+.mainFooter {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+p, input,
+.copyrightFooter,
+.contact span,
+.footerNav a
+ {
+    font-family: 'Roboto', sans-serif;
+}
+
 a {
     text-decoration: none;
 }
@@ -36,8 +55,9 @@ body {
     margin: 0 auto;
 }
 header {
-    background-image: url(../assets/header/backgroundSm.jpg);
+    background-image: url(../assets/header/backgroundLrg.jpg);
     background-position: center;
+    background-size: cover;
     min-height: 100vh;
     max-width: 2000px;
     width: 100%;
@@ -56,7 +76,6 @@ header {
 }
 
 .logo {
-    font-family: 'Cormorant Garamond';
     color: white;
     font-size: 3rem;
     font-weight: 600;
@@ -108,7 +127,6 @@ header {
 
 .mainTitle span {
     color: white;
-    font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
     width: 100%;
     line-height: 70%;
@@ -130,7 +148,7 @@ header {
 
 .socialMedia {
     float: right;
-    margin-top: 5%;
+    margin-top: 80px;
 }
 
 .socialMedia li {
@@ -156,7 +174,6 @@ header {
 /*------------ Main Style Starts -----------*/
 
 .sectionTitle { 
-    font-family: 'Cormorant Garamond', serif;
     font-size: 2rem;
     font-weight: 600;
     text-align: center;
@@ -164,7 +181,6 @@ header {
     margin: 50px auto 25px;
     width: 100%;
     float: left;
-    border: 1px solid red;
 }
 
 .sectionTitle span {
@@ -175,8 +191,7 @@ header {
 .newsArticleImages div {
     float: left;
     width: calc((100% - 80px) / 3);
-    margin: 25px 20px 50px;
-    /* border: 1px solid red; */
+    margin: 25px 20px 0;
 }
 
 .newsArticleImages div:first-child {
@@ -185,11 +200,65 @@ header {
 
 .newsArticleImages div:last-child {
     margin-right: 0;
-    /* border: 1px solid blue; */
 }
 
-/*------------ Common Article Styles -----------*/
+@media (max-width: 1010px) {
+    .newsArticleImages {
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+    .newsArticleImages div:nth-child(-n+1) {
+        width: calc(50% - 20px); 
+        margin-right: 20px;
+    }
+    .newsArticleImages div:nth-child(2) {
+        width: calc(50% - 20px);
+        margin-left: 20px;
+        margin-right: 0;
+    }
+    .newsArticleImages div:nth-child(3) {
+        display: none;
+    }
+}
 
+
+
+/*------------ Article Styles -----------*/
+
+.articleItem h2,
+.articleItem2 h2,
+.articleItem3 h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.2;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.articleItem button,
+.articleItem2 button,
+.articleItem3 button {
+    font-size: .7rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    background: rgba(24, 51, 153, 0.78);
+    border: none;
+    margin-top: 35px;;
+    padding: 15px 30px;
+    display: block;
+    float: left;
+    clear: both;
+}
+
+@media (max-width: 1010px) {
+    .articleItem button,
+    .articleItem2 button,
+    .articleItem3 button {
+        margin: 35px auto 0;
+        float: none;
+    }
+}
 
 /*------------ Article 1 Style Starts -----------*/
 
@@ -206,49 +275,60 @@ header {
 
 .article1 .articleItem {
     width: calc(70% - 20px);
-    /* margin-top: 15px; */
     margin-left: 20px;
     float: left;
-    /* border: 1px solid red; */
-}
-
-.article1 .articleItem h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: .9;
-    padding-bottom: 10px;
-    text-transform: uppercase;
 }
 
 .article1 .articleItem p {
-    font-family: 'Roboto', serif;
     font-size: .8rem;
     font-weight: 300;
     line-height: 1.8;
 }
 
-.article1 button {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: .7rem;
-    font-weight: 600;
-    color: white;
-    text-transform: uppercase;
-    background: rgba(24, 51, 153, 0.78);
-    border: none;
-    margin-top: 25px;
-    padding: 15px 30px;
-    display: block;
-    /* border: 1px solid red; */
+@media (max-width: 1190px) {
+    .article1 .articleImage {
+       width: calc(50% - 20px); 
+       margin-right: 20px;
+    }
+    .article1 .articleItem {
+        width: calc(50% - 20px);
+        margin: 10px 0 0 20px;
+    }
+
 }
+
+@media (max-width: 1010px) {
+    .article1 .articleImage {
+        width: 90%;
+        margin: 10% auto 0;
+        float: none;
+    }
+
+    .article1 .articleItem {
+        width: 80%;
+        float: none;
+        margin: 10% auto;
+    }
+    .article1 h2 {
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
 
 /*------------ Article 1 Style Ends -----------*/
 /*------------ Article 2 Style Starts -----------*/
 
 .article2 {
-    margin-top: 5%;
+    margin-top: 95px;
 }
-.article2 .articleItem2 {
+
+.articleImageMobile {
+    display: none;
+}
+
+.articleItem2 {
     width: calc(50% - 80px);
     float: left;
     margin-top: 50px;
@@ -256,18 +336,11 @@ header {
 }
 
 .articleItem2 h2 {
-    width: 60%;
-    font-family: 'Cormorant Garamond';
-    font-size: 1.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    line-height: 1.9rem;
-    padding-bottom: 1rem;
+    width: 75%;
     float: left;
 }
 
 .articleItem2 p {
-    font-family: 'Roboto', sans-serif;
     font-size: .8rem;
     font-weight: 300;
     line-height: 1.8;
@@ -276,25 +349,43 @@ header {
     
 }
 
-.articleItem2 button,
-.articleItem3 button {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: .7rem;
-    font-weight: 600;
-    color: white;
-    text-transform: uppercase;
-    background: rgba(24, 51, 153, 0.78);
-    border: none;
-    margin-top: 35px;;
-    padding: 15px 30px;
-    display: block;
-    float: left;
-    clear: both;
-}
-
 .article2 img {
     width: 50%;
     float: right;
+}
+
+@media (max-width: 1010px) {
+
+    .articleImageMobile {
+        background: url(../assets/article/articleImage5/articleImage5Md.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background: cover;
+        height: 500px;
+        width: 100%;
+        display: block;
+    }
+    .article2 .articleImage {
+       display: none;
+    }
+
+    .articleItem2 {
+        width: 80%;
+        float: none;
+        margin: 10% auto;
+    }
+
+    .articleItem2 h2 {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        float: none;
+    }
+
+    .articleItem2 p {
+        text-align: center;
+        float: none;
+    }
 }
 
 /*------------ Article 3 Style Starts -----------*/
@@ -304,26 +395,22 @@ header {
     float: left;
 }
 
+.article3 .articleImageMobile {
+    display: none;
+}
+
 .article3 .articleItem3 {
     width: calc(50% - 80px);
     float: right;
     margin-top: 50px;
     margin-left: 80px;
-    /* border: 1px solid red; */
 }
 
 .articleItem3 h2 {
     width: 100%;
-    font-family: 'Cormorant Garamond';
-    font-size: 1.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    line-height: 1.9rem;
-    padding-bottom: 1rem;
 }
 
 .articleItem3 p {
-    font-family: 'Roboto', sans-serif;
     font-size: .8rem;
     font-weight: 300;
     line-height: 1.8;
@@ -331,8 +418,29 @@ header {
     clear: both;
 }
 
+@media (max-width: 1010px) {
+    .article3 img {
+       display: none;
+    }
+
+     .articleImageMobile {
+        background: url(../assets/article/articleImage6/articleImage6Md.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background: cover;
+        height: 500px;
+        width: 100%;
+        display: block;
+    }
+
+    .articleItem3 {
+        float: none;
+        margin: auto;
+    }
+}
+
 /*------------ Article 3 Style Ends -----------*/
-/*------------ Brand Community Event Style Starts -----------*/
+/*------------ Icon Link Style Starts -----------*/
 
 section.iconLink {
     background: url(../assets/footer/footerMd.jpg) no-repeat;
@@ -342,27 +450,26 @@ section.iconLink {
 }
 
 .iconLinkContainer {
-    max-width: 1000px;
+    max-width: 1200px;
     width: 65%;
     height: 300px;
     margin: 0 auto;
     padding: 5% 0 0 0;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
 .iconLinkItem {
     color: white;
-    float: left;
     font-size: 1.5rem;
     text-align: center;
-    /* border: 1px solid red; */
     width: calc((100% - 60px) / 3);
     margin: 25px 15px 0;
+    float: left;
 }
 
 .iconLinkItem:first-child {
     margin-left: 0;
-}
+}   
 
 .iconLinkItem:last-child {
     margin-right: 0;
@@ -377,7 +484,6 @@ section.iconLink {
 }
 
 .iconLink a {
-    font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -385,41 +491,32 @@ section.iconLink {
     width: 100%;
 }
 
-/*------------ Brand Community Event Style Ends -----------*/
-
+/*------------ Icon Links Style Ends -----------*/
 /*------------ Footer Style Starts -----------*/
 
 .mainFooter {
     background: #e3e3e3;
-    /* height: 300px; */
 }
 
 .mainFooter .container {
     padding: 5% 0 5%;
-    /* border: 1px solid red; */
 }
 
 .mainFooter h3 {
-    font-family: 'Cormorant Garamond', serif;
     font-size: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
-    /* border: 1px solid cadetblue; */
-
 }
 
 .mainFooter p, .mainFooter span {
-    font-family: 'Roboto', sans-serif;
     font-weight: 300px;
     font-size: 0.8rem;
-    /* border: 1px solid crimson; */
 }
 
 .subscribe {
     float: left;
     width: calc(50% - 75px);
     margin-right: 75px;
-    /* border: 1px solid red; */
 }
 
 .subscribe p {
@@ -427,9 +524,8 @@ section.iconLink {
 }
 
 .subscribe input {
-    font-family: 'Roboto', sans-serif;
     font-size: .8rem;
-    height: 48.5px;
+    height: 47.5px;
     width: calc(75% - 30px);
     float: left;
     padding-left: 30px;
@@ -437,7 +533,6 @@ section.iconLink {
 }
 
 .subscribe button {
-    font-family: 'Cormorant Garamond', serif;
     font-size: .7rem;
     font-weight: 600;
     color: white;
@@ -447,17 +542,15 @@ section.iconLink {
     padding: 15px 30px;
     display: block;
     float: left;
-    /* width: 25%; */
     text-align: center;
-    /* border: 1px solid red; */
 }
+
 /*------------ Contact Styles Starts  -----------*/
 
 .contact {
     width: calc(40% - 150px);
     margin: 0 75px;
     float: left;
-    /* border: 1px solid red; */
 }
 
 .contact h3 {
@@ -485,20 +578,18 @@ section.iconLink {
 }
 
 .footerNavItem {
-    font-family: 'Catamaran', sans-serif;
     font-size: .8rem;
     text-transform: uppercase;
     float: right;
     clear: both;
-    /* border: 1px solid cadetblue; */
 }
 
 .footerNavItem a {
+    font-family: 'Catamaran', sans-serif;
     color: black;
     text-align: right;
-    line-height: 2;
+    line-height: 1.8;
     letter-spacing: 1px;
-    /* border: 1px solid red; */
 }
 
 /*------------ Footer Style Ends -----------*/
@@ -513,6 +604,3 @@ section.iconLink {
     text-align: center;
 }
 
-.copyrightFooter i {
-    font-size: .8rem;
-}
