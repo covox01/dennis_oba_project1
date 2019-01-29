@@ -495,7 +495,7 @@ header {
 /*------------ Icon Link Style Starts -----------*/
 
 section.iconLink {
-    background: url(../assets/footer/footerMd.jpg) no-repeat;
+    background: url(../assets/footer/footerLrg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -504,10 +504,8 @@ section.iconLink {
 .iconLinkContainer {
     max-width: 1200px;
     width: 65%;
-    /* height: 300px; */
     margin: 0 auto;
     padding: 10% 0 10%;
-    /* border: 1px solid red; */
 }
 
 .iconLinkItem {
@@ -541,6 +539,7 @@ section.iconLink {
     font-weight: 600;
     text-transform: uppercase;
     color: white;
+    padding: 0 30%;
 }
 
 @media (max-width: 1000px) {
@@ -565,9 +564,55 @@ section.iconLink {
     }
 }
 
-@media (max-width: 600) {
+@media (max-width: 520px) {
     section.iconLink {
-        height: 500px;
+        background: url(../assets/iconLinkBackground/iconLinkMobileBgMd.jpg) no-repeat;
+        background: cover;
+        width: 100%;
+        background-position: top right 50%;
+
+    }
+
+    .iconLinkContainer {
+        min-height: 100%;
+        /* padding: 7% 0 7%; */
+    }
+
+    .iconLinkItem {
+        margin: 12% auto;
+        float: none;
+    }
+
+    .iconLinkItem a {
+        font-size: 3rem;
+    }
+
+    .iconLinkItem:first-child,
+    .iconLinkItem:last-child {
+         margin: auto
+    } 
+
+    .iconLinkItem span {
+        padding: 0;
+    }
+}
+@media (max-width: 400px) {
+    section.iconLink {
+        background: url(../assets/iconLinkBackground/iconLinkMobileBgSm.jpg) no-repeat;
+        background: cover;
+        width: 100%;
+        background-position: top right 50%;
+        /* background-image: 50%; */
+        /* height: 598px; */
+    }
+     .iconLinkItem a {
+        font-size: 3rem;
+        display: block;
+    }
+
+    .iconLinkItem {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
