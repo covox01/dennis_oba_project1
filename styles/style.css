@@ -75,6 +75,13 @@ header {
     max-width: 1080px;
     width: 84%;
     margin: 0 auto;
+    /* border:1px solid red; */
+}
+
+@media (max-width: 1010px) {
+    .container {
+        width: 90%;
+    }
 }
 
 .headerNav {
@@ -93,10 +100,11 @@ header {
 /* -- Navigation Starts -- */
 
 .navigation {
-    width: 427px;
+    width: 353px;
     float: right;
     margin: 0 auto;
     transform: translateY(50%);
+    /* border: 1px solid blue; */
 }
 
 .navigation a {
@@ -107,6 +115,7 @@ header {
     text-transform: uppercase;
     float: left;
     margin: 0 5%;
+    /* border: 1px solid red; */
 }
 
 .navigation a:first-child {
@@ -115,7 +124,7 @@ header {
 
 .navigation a:last-child {
     margin-right: 0;
-} 
+}
 
 .navigation a span {   
     color: white;
@@ -184,7 +193,7 @@ header {
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
-    margin: 50px auto 25px;
+    margin: 70px auto 70px;
     width: 100%;
     float: left;
 }
@@ -197,7 +206,7 @@ header {
 .newsArticleImages div {
     float: left;
     width: calc((100% - 80px) / 3);
-    margin: 25px 20px 0;
+    margin: 0 20px 0;
 }
 
 .newsArticleImages div:first-child {
@@ -228,7 +237,7 @@ header {
 
 
 
-/*------------ Article Styles -----------*/
+/*------------  General Article Styles -----------*/
 
 .articleItem h2,
 .articleItem2 h2,
@@ -256,10 +265,16 @@ header {
     clear: both;
 }
 
-@media (max-width: 1010px) {
-    .articleItem button,
+@media (max-width: 1100px) {
     .articleItem2 button,
     .articleItem3 button {
+        margin: 35px auto 0;
+        float: none;
+    }
+}
+
+@media (max-width: 1010px) {
+    .articleItem button {
         margin: 35px auto 0;
         float: none;
     }
@@ -268,7 +283,7 @@ header {
 /*------------ Article 1 Style Starts -----------*/
 
 .article1 {
-    margin: 0 auto;
+    margin: 70px auto 0;
     position: relative;
 }
 
@@ -326,7 +341,7 @@ header {
 /*------------ Article 2 Style Starts -----------*/
 
 .article2 {
-    margin-top: 95px;
+    margin-top: 8%;
 }
 
 .articleImageMobile {
@@ -336,7 +351,7 @@ header {
 .articleItem2 {
     width: calc(50% - 80px);
     float: left;
-    margin-top: 50px;
+    margin-top: 5%;
     margin-right: 80px;
 }
 
@@ -359,11 +374,16 @@ header {
     float: right;
 }
 
-@media (max-width: 1010px) {
-
-.article2 {
-    margin-top: 0;
+@media (max-width: 1120px) {
+    /* .articleItem2  {
+    } */
+    .articleItem2 h2 {
+        width: 90%;
+        /* border: 1px solid red; */
+    }
 }
+
+@media (max-width: 1100px) {
     .article2 .articleImage {
         display: none;
     }
@@ -374,21 +394,21 @@ header {
     .article2 .articleImageMobile img {
         width: 100%;
         display: block;
-        margin-bottom: 10%;
+        margin-bottom: 8%;
     }
 
     .article2 .articleItem2 {
         width: 100%;
         float: none;
-        margin: 0 auto;
+        margin: 0 auto 10%;
         text-align: center;
     }
 
     .article2 .articleItem2 h2 {
         width: 100%;
-        float: none;
         margin: 0 auto;
         text-align: center;
+        /* border: 1px solid red; */
     }
 
     .article2 .articleItem2 p {
@@ -412,7 +432,7 @@ header {
 .article3 .articleItem3 {
     width: calc(50% - 80px);
     float: right;
-    margin-top: 50px;
+    margin-top: 5%;
     margin-left: 80px;
 }
 
@@ -428,7 +448,15 @@ header {
     clear: both;
 }
 
-@media (max-width: 1010px) {
+@media (max-width: 1190px) {
+    .article3 .articleItem3 {
+        margin-top: 10px;
+        /* border: 1px solid red; */
+    }
+}
+
+
+@media (max-width: 1100px) {
     .article3 .articleImage {
         display: none;
     }
@@ -450,7 +478,7 @@ header {
     }
 
     .article3 .articleItem3 h2 {
-        width: 100%;
+        width: 80%;
         float: none;
         margin: auto;
         text-align: center;
@@ -476,10 +504,10 @@ section.iconLink {
 .iconLinkContainer {
     max-width: 1200px;
     width: 65%;
-    height: 300px;
+    /* height: 300px; */
     margin: 0 auto;
-    padding: 5% 0 0 0;
-    border: 1px solid red;
+    padding: 10% 0 10%;
+    /* border: 1px solid red; */
 }
 
 .iconLinkItem {
@@ -487,8 +515,9 @@ section.iconLink {
     font-size: 1.5rem;
     text-align: center;
     width: calc((100% - 60px) / 3);
-    margin: 25px 15px 0;
+    margin: 0 15px 0;
     float: left;
+    /* border: 1px solid red; */
 }
 
 .iconLinkItem:first-child {
@@ -512,7 +541,34 @@ section.iconLink {
     font-weight: 600;
     text-transform: uppercase;
     color: white;
-    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    .iconLinkContainer {
+        width: 80%;
+    }
+}
+
+@media (max-width: 800px) {
+    .iconLink span {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .iconLinkContainer {
+        width: 90%;
+    }
+
+    .iconLink span {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 600) {
+    section.iconLink {
+        height: 500px;
+    }
 }
 
 /*------------ Icon Links Style Ends -----------*/
@@ -617,7 +673,6 @@ section.iconLink {
 }
 
 /*------------ Footer Style Ends -----------*/
-
 .copyrightFooter {
     width: 100%;
     font-family: 'Roboto', sans-serif;
@@ -626,5 +681,4 @@ section.iconLink {
     background: #acacac;
     padding: 15px 0;
     text-align: center;
-}
-
+} 
