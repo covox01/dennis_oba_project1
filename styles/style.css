@@ -575,16 +575,17 @@ section.iconLink {
 
     .iconLinkContainer {
         min-height: 100%;
-        /* padding: 7% 0 7%; */
     }
 
     .iconLinkItem {
         margin: 12% auto;
+        width: 100%;
         float: none;
     }
 
     .iconLinkItem a {
-        font-size: 3rem;
+        font-size: 2rem;
+        padding: 0 0;
     }
 
     .iconLinkItem:first-child,
@@ -592,8 +593,12 @@ section.iconLink {
          margin: auto
     } 
 
+    .iconLinkItem:last-child span {
+        padding-bottom: 0;
+    }
+
     .iconLinkItem span {
-        padding: 0;
+        font-size: 1rem;
     }
 }
 @media (max-width: 400px) {
@@ -602,17 +607,25 @@ section.iconLink {
         background: cover;
         width: 100%;
         background-position: top right 50%;
-        /* background-image: 50%; */
-        /* height: 598px; */
     }
+
+    /* .iconLinkContainer {
+        padding-bottom: 0;
+    } */
+
+     .iconLinkItem {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
      .iconLinkItem a {
-        font-size: 3rem;
+        font-size: 2rem;
         display: block;
     }
 
-    .iconLinkItem {
-        padding-left: 0;
-        padding-right: 0;
+    .iconLinkItem:nth-of-type(2) a span {
+        text-align: center;
+        font-size: 1rem;
     }
 }
 
