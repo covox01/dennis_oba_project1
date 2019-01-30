@@ -319,9 +319,6 @@ header {
 }
 
 @media (max-width: 1010px) {
-    .newsArticleImages {
-        /* margin-bottom: 12%; */
-    }
     .newsArticleImages div:nth-child(-n+1) {
         width: calc(50% - 2%); 
         margin-right: 2%;
@@ -1133,9 +1130,6 @@ section.iconLink {
         float: right;
         width: 20%;
         margin-top: 30px;
-    }
-    .footerNavItem {
-       /* margin: 3% 0;  */
     }
 
     .footerNavItem a {
