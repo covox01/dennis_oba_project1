@@ -6,7 +6,9 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-/*------------ General -----------*/
+/* ---- Setup Ends ---- */
+
+/*------------ General Style Starts-----------*/
 
 html {
     font-size: 125%;
@@ -16,8 +18,6 @@ h1, h2, h3, h4, ul, li, a, p, nav, span {
     padding: 0;
     margin: 0;
 }
-
-/*------------ Fonts -----------*/
 
 h2, h3,
 button,
@@ -49,11 +49,31 @@ img {
     display: block;
 }
 
-/*------------ Header -----------*/
 body {
     max-width: 1800px;
     margin: 0 auto;
 }
+
+/*------------ General Styles End -----------*/
+
+/*------------ Container Style Starts-----------*/
+
+.container {
+    max-width: 1080px;
+    width: 84%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1010px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/*------------ Container Style Ends -----------*/
+
+/*------------ Header Styles Start -----------*/
+
 header {
     background-image: url(../assets/header/backgroundLrg.jpg);
     background-position: center;
@@ -63,6 +83,10 @@ header {
     width: 100%;
     background-repeat: no-repeat;
     position: relative;
+}
+
+.headerNav {
+    padding-top: 20px;
 }
 
 @media (max-width: 700px) {
@@ -78,28 +102,9 @@ header {
     }
 }
 
-.container {
-    max-width: 1080px;
-    width: 84%;
-    margin: 0 auto;
-    /* border:1px solid red; */
-}
+/*------------ Header Style End -----------*/
 
-@media (max-width: 1010px) {
-    .container {
-        width: 90%;
-    }
-}
-
-@media (max-width: 500px) {
-    /* .container {
-        width: 100%;
-    } */
-}
-
-.headerNav {
-    padding-top: 20px;
-}
+/*------------ Logo Style Starts -----------*/
 
 .logo {
     color: white;
@@ -116,7 +121,9 @@ header {
     }
 }
 
-/* -- Navigation Starts -- */
+/*------------ Logo Style Ends -----------*/
+
+/*------------ Navigation Style Starts -----------*/
 
 .navigation {
     width: 353px;
@@ -164,11 +171,11 @@ header {
         color: white;
         font-size: 2rem;
     }
-    
 }
 
-/* -- Navigation Ends -- */
-/* -- Main Title Starts -- */
+/*------------ Navigation Style Ends -----------*/
+
+/*------------ Title Style Starts -----------*/
 
 .mainTitle {
     text-transform: uppercase;
@@ -246,8 +253,9 @@ header {
 
 }
 
-/* -- Main Title Ends -- */
-/* -- Social Media Starts -- */
+/*------------ Title Style Ends -----------*/
+
+/*------------ Social Media Style Starts -----------*/
 
 .socialMedia {
     float: right;
@@ -277,10 +285,9 @@ header {
     }
 }
 
-/* -- Social Media Ends -- */
+/*------------ Social Media Style Ends -----------*/
 
-/*------------ Header Style Ends -----------*/
-/*------------ Main Style Starts -----------*/
+/*------------ Article Title / Image Style Starts -----------*/
 
 .sectionTitle { 
     font-size: 2rem;
@@ -329,7 +336,7 @@ header {
     }
 }
 
-
+/*------------ Article Title / Image Style Ends -----------*/
 
 /*------------  General Article Styles -----------*/
 
@@ -370,7 +377,9 @@ header {
     }
 }
 
-/*------------ Button -----------*/
+/*------------ General Article Style Ends -----------*/
+
+/*------------ Button Style Starts -----------*/
 
 .articleItem button,
 .articleItem2 button,
@@ -414,14 +423,14 @@ header {
     }
 }
 
+/*------------ Button Style Ends -----------*/
+
 /*------------ Article 1 Style Starts -----------*/
 
 .article1 {
     margin: 10% auto 0;
     position: relative;
 }
-
-
 
 .article1 p {
     float: left;
@@ -432,6 +441,14 @@ header {
     width: calc(30% - 20px);
     margin-right: 20px;
     float: left;
+}
+
+.article1 .articleImageMd {
+    display: none;
+}
+
+.article1 .articleImageLrg {
+    display: none;
 }
 
 .article1 .articleItem {
@@ -447,22 +464,33 @@ header {
 }
 
 @media (max-width: 1190px) {
-    .article1 .articleImage {
-       width: calc(50% - 20px); 
-       margin-right: 20px;
+    .article1 .articleImage {   
+       display: none;
     }
     .article1 .articleItem {
         width: calc(50% - 20px);
         margin: 10px 0 0 20px;
     }
 
+    .article1 .articleImageMd {
+        display: block;
+        float: left;
+        width: calc(50% - 20px); 
+        margin-right: 20px;
+    }
+
 }
 
 @media (max-width: 1010px) {
-    .article1 .articleImage {
+    .article1 .articleImageMd {
+        display: none;
+    }
+
+    .article1 .articleImageLrg {
+        float: none;
+        display: block;
         width: 90%;
         margin: 0 auto 10%;
-        float: none;
     }
 
     .article1 .articleItem {
@@ -478,6 +506,7 @@ header {
 }
 
 /*------------ Article 1 Style Ends -----------*/
+
 /*------------ Article 2 Style Starts -----------*/
 
 .article2 {
@@ -544,7 +573,6 @@ header {
     .article2 .articleItem2 {
         width: 100%;
         float: none;
-        /* margin: 0 auto 20%; */
         text-align: center;
     }
 
@@ -552,7 +580,6 @@ header {
         width: 90%;
         margin: 0 5%;
         text-align: center;
-        /* border: 1px solid red; */
     }
 
     .article2 .articleItem2 p {
@@ -570,6 +597,8 @@ header {
         margin-bottom: 13%;
     }
 }
+
+/*------------ Article 2 Style Ends -----------*/
 
 /*------------ Article 3 Style Starts -----------*/
 
@@ -654,7 +683,6 @@ header {
 @media (max-width: 500px) {
     .article3 {
         margin: 15% 0;
-        /* border: 1px solid red; */
     }
 
     .article3 .articleItem3 h2 {
@@ -668,10 +696,11 @@ header {
 }
 
 /*------------ Article 3 Style Ends -----------*/
+
 /*------------ Icon Link Style Starts -----------*/
 
 section.iconLink {
-    background: url(../assets/footer/footerLrg.jpg) no-repeat;
+    background: url(../assets/iconLinkBg/iconLinkBgLrg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -692,7 +721,6 @@ section.iconLink {
     margin: 0 15px 0;
     float: left;
 }
-
 
 .notMobile:nth-of-type(1) {
     margin-left: 0;
@@ -746,7 +774,7 @@ section.iconLink {
 
 @media (max-width: 520px) {
     section.iconLink {
-        background: url(../assets/iconLinkBackground/iconLinkMobileBgMd.jpg) no-repeat;
+        background: url(../assets/iconLinkBg/iconLinkMobileBgMd.jpg) no-repeat;
         background: cover;
         width: 100%;
         background-position: top right 50%;
@@ -790,7 +818,7 @@ section.iconLink {
 
 @media (max-width: 400px) {
     section.iconLink {
-        background: url(../assets/iconLinkBackground/iconLinkMobileBgSm.jpg) no-repeat;
+        background: url(../assets/iconLinkBg/iconLinkMobileBgSm.jpg) no-repeat;
         background: cover;
         width: 100%;
         background-position: top right 50%;
@@ -816,8 +844,8 @@ section.iconLink {
     }
 }
 
-
 /*------------ Icon Links Style Ends -----------*/
+
 /*------------ Footer Style Starts -----------*/
 
 .mainFooter {
@@ -845,11 +873,12 @@ section.iconLink {
     }
 }
 
+/*------------ Footer: Subscribe Style Starts -----------*/
+
 .subscribe {
     float: left;
     width: calc(50% - 10%);
     margin-right: 10%;
-    /* border: 1px solid red; */
 }
 
 .subscribe p {
@@ -923,7 +952,6 @@ section.iconLink {
 @media (max-width: 900px) {
     .subscribe input {
         width: 68%;
-        /* border: 1px solid blue; */
     }
 }
 
@@ -957,6 +985,7 @@ section.iconLink {
         color: black;
         opacity: 1;
     }
+
     .subscribe button {
         font-family: 'Catamaran', sans-serif;
         letter-spacing: 1px;
@@ -966,13 +995,14 @@ section.iconLink {
     }
 }
 
-/*------------ Contact Styles Starts  -----------*/
+/*------------ Footer: Subscribe Style Ends -----------*/
+
+/*------------ Footer: Contact Style Starts  -----------*/
 
 .contact {
     width: calc(32% - 10%);
     margin: 0 5%;
     float: left;
-    /* border: 1px solid red; */
 }
 
 .contact h3 {
@@ -1050,16 +1080,15 @@ section.iconLink {
     }
 }
 
+/*------------ Footer: Contact Style Ends  -----------*/
 
-
-/*------------ Contact Styles Ends -----------*/
+/*------------ Footer: Navigation Style Starts -----------*/
 
 .footerNav {
     width: calc(13% - 5%);
     line-height: 5px;
     margin-left: 5%;
     float: right;
-    /* border: 1px solid red; */
 }
 
 .footerNavItem {
@@ -1120,9 +1149,9 @@ section.iconLink {
     }
 }
 
+/*------------ Footer: Navigation Style Ends-----------*/
 
-
-/*------------ Footer Style Ends -----------*/
+/*------------ Copyright Style Starts -----------*/
 
 .copyrightFooter {
     width: 100%;
@@ -1133,3 +1162,5 @@ section.iconLink {
     padding: 15px 0;
     text-align: center;
 } 
+
+/*------------ Copyright Style Ends -----------*/
