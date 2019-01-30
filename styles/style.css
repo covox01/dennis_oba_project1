@@ -65,11 +65,18 @@ header {
     position: relative;
 }
 
-/* @media (max-width: 1010px) {
+@media (max-width: 700px) {
     header {
-        width: 80%;
+        background-image: url(../assets/header/backgroundMobileLrg.jpg);
+        background-position: center, -100px;
     }
-} */
+}
+
+@media (max-width: 500px) {
+    header {
+        background-image: url(../assets/header/backgroundMobileMd.jpg);
+    }
+}
 
 .container {
     max-width: 1080px;
@@ -84,6 +91,12 @@ header {
     }
 }
 
+@media (max-width: 500px) {
+    /* .container {
+        width: 100%;
+    } */
+}
+
 .headerNav {
     padding-top: 20px;
 }
@@ -95,6 +108,12 @@ header {
     font-style: italic;
     text-transform: uppercase;
     float: left;
+}
+
+@media (max-width: 700px) {
+    .logo {
+        display: none;
+    }
 }
 
 /* -- Navigation Starts -- */
@@ -130,6 +149,24 @@ header {
     color: white;
 }
 
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .navigation {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        float:right;
+        color: white;
+        font-size: 2rem;
+    }
+    
+}
+
 /* -- Navigation Ends -- */
 /* -- Main Title Starts -- */
 
@@ -158,6 +195,57 @@ header {
     clear: both;
 }
 
+@media (max-width: 700px) {
+    .mainTitle {
+        margin-top: 26vh;
+    }
+    .mainTitle span:first-child {
+        font-size: 10rem;
+    }
+    .mainTitle span:last-child {
+        font-size: 5rem;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .mainTitle {
+        margin-top: 30vh;
+    }
+    .mainTitle span:first-child {
+        font-size: 8rem;
+    }
+    .mainTitle span:last-child {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 490px) {
+    .mainTitle {
+        margin-top: 32vh;
+    }
+    .mainTitle span:first-child {
+        font-size: 7rem;
+    }
+    .mainTitle span:last-child {
+        font-size: 4rem;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .mainTitle {
+        margin-top: 35vh;
+    }
+    .mainTitle span:first-child {
+        font-size: 6rem;
+    }
+    .mainTitle span:last-child {
+        font-size: 3.5rem;
+    }
+
+}
+
 /* -- Main Title Ends -- */
 /* -- Social Media Starts -- */
 
@@ -181,6 +269,12 @@ header {
 
 .socialMedia li:nth-of-type(2) {
     margin-left: .6rem;
+}
+
+@media (max-width: 850px) {
+    .socialMedia {
+        display: none;
+    }
 }
 
 /* -- Social Media Ends -- */
@@ -219,15 +313,15 @@ header {
 
 @media (max-width: 1010px) {
     .newsArticleImages {
-        margin-bottom: 10%;
+        /* margin-bottom: 12%; */
     }
     .newsArticleImages div:nth-child(-n+1) {
-        width: calc(50% - 20px); 
-        margin-right: 20px;
+        width: calc(50% - 2%); 
+        margin-right: 2%;
     }
     .newsArticleImages div:nth-child(2) {
-        width: calc(50% - 20px);
-        margin-left: 20px;
+        width: calc(50% - 2%);
+        margin-left: 2%;
         margin-right: 0;
     }
     .newsArticleImages div:nth-child(3) {
@@ -247,7 +341,36 @@ header {
     line-height: 1.2;
     padding-bottom: 10px;
     text-transform: uppercase;
+    float: left;
 }
+
+@media (max-width: 1000px) {
+    .articleItem h2,
+    .articleItem2 h2,
+    .articleItem3 h2 {
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 600px) {
+    .articleItem h2,
+    .articleItem2 h2,
+    .articleItem3 h2 {
+        font-size: 1.4rem;
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+    .articleItem h2,
+    .articleItem2 h2,
+    .articleItem3 h2 {
+        font-size: 1.2rem;
+        width: 90%;
+        margin: 0 0 10%;
+    }
+}
+
+/*------------ Button -----------*/
 
 .articleItem button,
 .articleItem2 button,
@@ -258,18 +381,29 @@ header {
     text-transform: uppercase;
     background: rgba(24, 51, 153, 0.78);
     border: none;
-    margin-top: 35px;;
+    margin-top: 35px;
     padding: 15px 30px;
     display: block;
     float: left;
     clear: both;
 }
 
+.articleItem button {
+    margin-top: 0;
+}
+
+
 @media (max-width: 1100px) {
     .articleItem2 button,
     .articleItem3 button {
         margin: 35px auto 0;
         float: none;
+    }
+}
+
+@media (max-width: 1100px) {
+    .articleItem button {
+        margin: 0 auto 0;
     }
 }
 
@@ -283,8 +417,15 @@ header {
 /*------------ Article 1 Style Starts -----------*/
 
 .article1 {
-    margin: 70px auto 0;
+    margin: 10% auto 0;
     position: relative;
+}
+
+
+
+.article1 p {
+    float: left;
+    margin-bottom: 35px;
 }
 
 .article1 .articleImage {
@@ -327,7 +468,7 @@ header {
     .article1 .articleItem {
         width: 80%;
         float: none;
-        margin: 0 auto 10%;
+        margin: 0 auto;
     }
     .article1 h2 {
         float: none;
@@ -335,7 +476,6 @@ header {
         text-align: center;
     }
 }
-
 
 /*------------ Article 1 Style Ends -----------*/
 /*------------ Article 2 Style Starts -----------*/
@@ -351,7 +491,7 @@ header {
 .articleItem2 {
     width: calc(50% - 80px);
     float: left;
-    margin-top: 5%;
+    margin-top: 6%;
     margin-right: 80px;
 }
 
@@ -374,16 +514,20 @@ header {
     float: right;
 }
 
-@media (max-width: 1120px) {
-    /* .articleItem2  {
-    } */
+@media (max-width: 1150px) {
+    .articleItem2  {
+        margin-top: 3%;
+    }
     .articleItem2 h2 {
         width: 90%;
-        /* border: 1px solid red; */
     }
 }
 
 @media (max-width: 1100px) {
+    .article2 {
+        margin: 10% 0;
+    }
+
     .article2 .articleImage {
         display: none;
     }
@@ -394,19 +538,19 @@ header {
     .article2 .articleImageMobile img {
         width: 100%;
         display: block;
-        margin-bottom: 8%;
+        margin-bottom: 9%;
     }
 
     .article2 .articleItem2 {
         width: 100%;
         float: none;
-        margin: 0 auto 10%;
+        /* margin: 0 auto 20%; */
         text-align: center;
     }
 
     .article2 .articleItem2 h2 {
-        width: 100%;
-        margin: 0 auto;
+        width: 90%;
+        margin: 0 5%;
         text-align: center;
         /* border: 1px solid red; */
     }
@@ -415,6 +559,15 @@ header {
         width: 80%;
         margin: 0 auto;
         float: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .article2 {
+        margin: 15% 0;
+    }
+    .article2 .articleImageMobile img {
+        margin-bottom: 13%;
     }
 }
 
@@ -450,13 +603,21 @@ header {
 
 @media (max-width: 1190px) {
     .article3 .articleItem3 {
-        margin-top: 10px;
-        /* border: 1px solid red; */
+        margin-top: 2.5%;
     }
 }
 
+@media (max-width: 1150px) {
+    .article3 .articleItem3 {
+        margin-top: 1%;
+    }
+}
 
 @media (max-width: 1100px) {
+    .article3 {
+        margin: 10% auto;
+    }
+
     .article3 .articleImage {
         display: none;
     }
@@ -467,20 +628,19 @@ header {
     .article3 .articleImageMobile img {
         width: 100%;
         display: block;
-        margin-bottom: 10%;
+        margin-bottom: 9%;
     }
 
     .article3 .articleItem3 {
         width: 100%;
         float: none;
-        margin: 10% auto;
+        margin: 10% auto 0;
         text-align: center;
     }
 
     .article3 .articleItem3 h2 {
         width: 80%;
-        float: none;
-        margin: auto;
+        margin: 0 10%;
         text-align: center;
     }
 
@@ -488,6 +648,22 @@ header {
         width: 80%;
         margin: 0 auto;
         float: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .article3 {
+        margin: 15% 0;
+        /* border: 1px solid red; */
+    }
+
+    .article3 .articleItem3 h2 {
+        width: 90%;
+        margin: 0 5%;
+    }
+
+    .article3 .articleImageMobile img {
+        margin-bottom: 13%;
     }
 }
 
@@ -515,12 +691,12 @@ section.iconLink {
     width: calc((100% - 60px) / 3);
     margin: 0 15px 0;
     float: left;
-    /* border: 1px solid red; */
 }
 
-.iconLinkItem:first-child {
+
+.notMobile:nth-of-type(1) {
     margin-left: 0;
-}   
+}
 
 .iconLinkItem:last-child {
     margin-right: 0;
@@ -540,6 +716,10 @@ section.iconLink {
     text-transform: uppercase;
     color: white;
     padding: 0 30%;
+}
+
+.mobile {
+    display: none;
 }
 
 @media (max-width: 1000px) {
@@ -570,7 +750,14 @@ section.iconLink {
         background: cover;
         width: 100%;
         background-position: top right 50%;
+    }
 
+    .mobile {
+        display: block;
+    }
+
+    .notMobile {
+        display: none;
     }
 
     .iconLinkContainer {
@@ -584,12 +771,11 @@ section.iconLink {
     }
 
     .iconLinkItem a {
-        font-size: 2rem;
+        font-size: 2.5rem;
         padding: 0 0;
     }
 
-    .iconLinkItem:first-child,
-    .iconLinkItem:last-child {
+    .iconLinkItem .mobile {
          margin: auto
     } 
 
@@ -601,6 +787,7 @@ section.iconLink {
         font-size: 1rem;
     }
 }
+
 @media (max-width: 400px) {
     section.iconLink {
         background: url(../assets/iconLinkBackground/iconLinkMobileBgSm.jpg) no-repeat;
@@ -609,17 +796,17 @@ section.iconLink {
         background-position: top right 50%;
     }
 
-    /* .iconLinkContainer {
-        padding-bottom: 0;
-    } */
+    .iconLinkContainer {
+        padding: 6% 0 3%;
+    }
 
      .iconLinkItem {
         padding-left: 0;
         padding-right: 0;
     }
 
-     .iconLinkItem a {
-        font-size: 2rem;
+    .iconLinkItem a {
+        font-size: 2.1rem;
         display: block;
     }
 
@@ -629,6 +816,7 @@ section.iconLink {
     }
 }
 
+
 /*------------ Icon Links Style Ends -----------*/
 /*------------ Footer Style Starts -----------*/
 
@@ -637,7 +825,7 @@ section.iconLink {
 }
 
 .mainFooter .container {
-    padding: 5% 0 5%;
+    padding: 5% 0;
 }
 
 .mainFooter h3 {
@@ -651,10 +839,17 @@ section.iconLink {
     font-size: 0.8rem;
 }
 
+@media (max-width: 800px) {
+    .mainFooter .container {
+        padding: 10% 0;
+    }
+}
+
 .subscribe {
     float: left;
-    width: calc(50% - 75px);
-    margin-right: 75px;
+    width: calc(50% - 10%);
+    margin-right: 10%;
+    /* border: 1px solid red; */
 }
 
 .subscribe p {
@@ -664,9 +859,9 @@ section.iconLink {
 .subscribe input {
     font-size: .8rem;
     height: 47.5px;
-    width: calc(75% - 30px);
+    width: calc(78.9% - 10%);
     float: left;
-    padding-left: 30px;
+    padding-left: 10%;
     border: none;
 }
 
@@ -683,16 +878,105 @@ section.iconLink {
     text-align: center;
 }
 
+@media (max-width: 1300px) {
+    .subscribe {
+        width: calc(49% - 5%);
+        margin-right: 5%;
+    } 
+}
+
+@media (max-width: 1200px) {
+    .subscribe {
+        width: calc(49% - 5%);
+        margin-right: 2.5%;
+    } 
+
+    .subscribe p {
+        font-size: .8rem;
+    }
+     .subscribe input {
+        height: 40px;
+        width: calc(78.9% - 10%);
+    }
+    .subscribe button {
+        padding: 12px 5%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .subscribe p {
+        font-size: .7rem;
+    }
+    .subscribe input {
+        font-size: .8rem;
+        height: 40px;
+        width: calc(78.9% - 10%);
+        float: left;
+        padding-left: 10%;
+        border: none;
+    }
+    .subscribe button {
+        padding: 12px 5%;
+    }
+}
+
+@media (max-width: 900px) {
+    .subscribe input {
+        width: 68%;
+        /* border: 1px solid blue; */
+    }
+}
+
+@media (max-width: 850px) {
+    .subscribe input {
+        width: 65%;
+    }
+}
+
+@media (max-width: 800px) {
+    .subContainer {
+        max-width: 500px;
+        width: 85%;
+    }
+    .subscribe {
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+    }
+    .subscribe input {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0;
+        color: black;
+    }
+
+    input::placeholder {
+        color: black;
+        opacity: 1;
+    }
+    .subscribe button {
+        font-family: 'Catamaran', sans-serif;
+        letter-spacing: 1px;
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
 /*------------ Contact Styles Starts  -----------*/
 
 .contact {
-    width: calc(40% - 150px);
-    margin: 0 75px;
+    width: calc(32% - 10%);
+    margin: 0 5%;
     float: left;
+    /* border: 1px solid red; */
 }
 
 .contact h3 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .contact span {
@@ -706,13 +990,76 @@ section.iconLink {
     padding-bottom: 0;
 }
 
+@media (max-width: 1300px) {
+    .contact {
+        width: calc(29% - 5%);
+        margin: 0 7%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .contact {
+        width: 22%;
+        margin: 0 10%;
+    }
+    .contact span {
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .contact {
+        width: 26%;
+        margin: 0 8%;
+    }
+    .contact span {
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .contact {
+        width: 28%;
+        margin: 0 7%;
+    }
+    .contact span {
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .contact {
+        width: 30%;
+        margin: 0 6%;
+    }
+    .contact span {
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .contact {
+        margin: 0;
+        width: 70%;
+    }
+    .contact h3 {
+        font-size: 1rem;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
 /*------------ Contact Styles Ends -----------*/
 
 .footerNav {
-    width: calc(10% - 75px);
+    width: calc(13% - 5%);
     line-height: 5px;
-    margin-left: 75px;
+    margin-left: 5%;
     float: right;
+    /* border: 1px solid red; */
 }
 
 .footerNavItem {
@@ -724,13 +1071,59 @@ section.iconLink {
 
 .footerNavItem a {
     font-family: 'Catamaran', sans-serif;
+    font-weight: 600;
     color: black;
     text-align: right;
     line-height: 1.8;
     letter-spacing: 1px;
 }
 
+@media (max-width: 1300px) {
+    .footerNav {
+        width: calc(14% - 5%);
+        margin-left: 2.5%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .footerNav {
+        width: calc(14% - 5%);
+        margin-left: 2.5%;
+    }
+
+    .footerNavItem {
+        margin: 2% 0;
+    }
+    .footerNavItem a {
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .footerNav {
+        float: right;
+        width: 20%;
+        margin-top: 30px;
+    }
+    .footerNavItem {
+       /* margin: 3% 0;  */
+    }
+
+    .footerNavItem a {
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 500px) {
+    .footerNavItem {
+        margin: 5% 0;
+    }
+}
+
+
+
 /*------------ Footer Style Ends -----------*/
+
 .copyrightFooter {
     width: 100%;
     font-family: 'Roboto', sans-serif;
